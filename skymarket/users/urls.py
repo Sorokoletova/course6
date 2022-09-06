@@ -10,4 +10,3 @@ users_router.register("users", UserViewSet, basename='users')
 urlpatterns = [
     path("", include(users_router.urls)),
 ]
-

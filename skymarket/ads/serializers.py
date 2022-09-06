@@ -3,7 +3,6 @@ from ads.models import Ad, Comment
 from phonenumber_field import serializerfields
 
 
-
 # TODO Сериалайзеры. Предлагаем Вам такую структуру, однако вы вправе использовать свою
 
 class CommentSerializer(serializers.ModelSerializer):
@@ -11,7 +10,6 @@ class CommentSerializer(serializers.ModelSerializer):
     ad_id = serializers.ReadOnlyField(source="ad.id")
     author_first_name = serializers.ReadOnlyField(source="author.first_name")
     author_last_name = serializers.ReadOnlyField(source="author.last_name")
-
 
     class Meta:
         model = Comment
@@ -41,4 +39,3 @@ class AdDetailSerializer(serializers.ModelSerializer):
                   'author_last_name',
                   'description',
                   'author_id',)
-

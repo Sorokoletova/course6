@@ -40,6 +40,3 @@ class UserManager(BaseUserManager):
         user.role = 'admin'
         user.save(using=self._db)
         return user
-
-    # def get_by_natural_key(self, email_):
-    #     return self.get(code_number=email_)

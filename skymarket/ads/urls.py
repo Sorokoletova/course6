@@ -15,6 +15,3 @@ urlpatterns = [
     path("", include(comments_router.urls)),
 
 ]
-
-
-
